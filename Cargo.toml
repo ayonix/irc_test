@@ -1,0 +1,13 @@
+[package]
+name = "irc-test"
+version = "0.1.0"
+authors = ["adrian"]
+
+[dependencies]
+regex = "*"
+
+[lib]
+name = "irc_test"
+
+[[bin]]
+name = "irc_test"

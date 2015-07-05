@@ -51,8 +51,9 @@ impl Network {
             }
         });
 
-        self.send("", format!("NICK {}", self.username));
-        self.send("", format!("USER {0} {0} {0} :{0}", self.username));
+        let name = self.username.clone();
+        self.send("", format!("NICK {}", name));
+        self.send("", format!("USER {0} {0} {0} :{0}", name));
     }
 
     pub fn join(&mut self, channel: &'static str) {
